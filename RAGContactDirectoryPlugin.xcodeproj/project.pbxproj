@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B715048B1081DDB600149602 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B71502921081DC9500149602 /* Adium.framework */; };
-		B715048C1081DDB600149602 /* AIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B71502941081DC9500149602 /* AIUtilities.framework */; };
+		B7DA63FC1081F063009D14A4 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DA63FB1081F063009D14A4 /* Adium.framework */; };
+		B7DA65CE1081F337009D14A4 /* AIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DA65CD1081F337009D14A4 /* AIUtilities.framework */; };
 		B7BFF0F4108349F500AB3B1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7BFF0F2108349F500AB3B1A /* Localizable.strings */; };
 		B7F4BDF91081B43A0091A911 /* RAGContactDirectoryPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F4BDF81081B43A0091A911 /* RAGContactDirectoryPlugin.m */; };
 /* End PBXBuildFile section */
@@ -17,8 +17,8 @@
 		32DBCF630370AF2F00C91783 /* RAGContactDirectoryPlugin_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAGContactDirectoryPlugin_Prefix.pch; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* ContactSubdirectoryPlugin.AdiumPlugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactSubdirectoryPlugin.AdiumPlugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B71502921081DC9500149602 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adium.framework; path = "/Users/Rahul/Developer/adium-1.4/build/Release/Adium.framework"; sourceTree = "<absolute>"; };
-		B71502941081DC9500149602 /* AIUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AIUtilities.framework; path = "/Users/Rahul/Developer/adium-1.4/build/Release/AIUtilities.framework"; sourceTree = "<absolute>"; };
+		B7DA63FB1081F063009D14A4 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adium.framework; path = "/Users/Rahul/Developer/adium-1.3.6/build/Deployment/Adium.framework"; sourceTree = "<absolute>"; };
+		B7DA65CD1081F337009D14A4 /* AIUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AIUtilities.framework; path = "/Users/Rahul/Developer/adium-1.3.6/build/Deployment/AIUtilities.framework"; sourceTree = "<absolute>"; };
 		B7BFF0F3108349F500AB3B1A /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B7F4BDF71081B43A0091A911 /* RAGContactDirectoryPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAGContactDirectoryPlugin.h; sourceTree = "<group>"; };
 		B7F4BDF81081B43A0091A911 /* RAGContactDirectoryPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAGContactDirectoryPlugin.m; sourceTree = "<group>"; };
@@ -29,8 +29,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B715048B1081DDB600149602 /* Adium.framework in Frameworks */,
-				B715048C1081DDB600149602 /* AIUtilities.framework in Frameworks */,
+				B7DA63FC1081F063009D14A4 /* Adium.framework in Frameworks */,
+				B7DA65CE1081F337009D14A4 /* AIUtilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,8 +79,8 @@
 		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B71502921081DC9500149602 /* Adium.framework */,
-				B71502941081DC9500149602 /* AIUtilities.framework */,
+				B7DA63FB1081F063009D14A4 /* Adium.framework */,
+				B7DA65CD1081F337009D14A4 /* AIUtilities.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -118,6 +118,7 @@
 				8D5B49AF048680CD000E48DA /* Resources */,
 				8D5B49B1048680CD000E48DA /* Sources */,
 				8D5B49B3048680CD000E48DA /* Frameworks */,
+				B7DA66A21081F6ED009D14A4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -157,6 +158,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B7DA66A21081F6ED009D14A4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "install_name_tool -change @rpath/AIUtilities.framework/Versions/A/AIUtilities @executable_path/../Frameworks/AIUtilities.framework/Versions/A/AIUtilities $TARGET_BUILD_DIR/ContactSubdirectoryPlugin.AdiumPlugin/Contents/MacOS/ContactSubdirectoryPlugin";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8D5B49B1048680CD000E48DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -184,12 +201,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../adium/build/Release\"",
 					"\"$(SRCROOT)/../adium-1.4/build/Release-Debug\"",
 					"\"$(SRCROOT)/../adium-1.4/build/Release\"",
+					"\"$(SRCROOT)/../adium-1.3.6/build/Deployment\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -208,12 +227,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../adium/build/Release\"",
 					"\"$(SRCROOT)/../adium-1.4/build/Release-Debug\"",
 					"\"$(SRCROOT)/../adium-1.4/build/Release\"",
+					"\"$(SRCROOT)/../adium-1.3.6/build/Deployment\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -233,6 +254,7 @@
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_MODEL_TUNING = G4;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = 4.0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = "\"$(HOME)/Library/Application Support/Adium 2.0/PlugIns/\"";
@@ -253,6 +275,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_MODEL_TUNING = G4;
+				GCC_VERSION = 4.0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = "\"$(HOME)/Library/Application Support/Adium 2.0/PlugIns/\"";
