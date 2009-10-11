@@ -1,0 +1,18 @@
+Contact Subdirectory Plugin
+	
+	CSP is an Adium plugin which places incoming files into subfolders of the default download directory based on the user id (optionally, display name and user ID) of the sender.
+
+Functionality
+
+	As long as Adium is set up to automatically accept files, CSP will work seamlessly. If you are asked to select a directory to download the file to, and select the default directory, CSP will kick in and redirect the file to the appropriate subdirectory. If you do, however, choose another directory, CSP will /not/ create a subdirectory there.
+	The subdirectory will named for the user ID of the sender, or the display name (with user ID in brackets), depending on your setting. The use of display names in folders can be toggled ("Display Name in Download Subfolder") in the Edit menu.
+
+Compiling from Source
+
+	You will need compiled versions of Adium.framework and AIUtilities.framework, in addition to the CSP source, to compile. More information on obtaining and compiling the Adium sources can be found on the Adium wiki [http://trac.adium.im/wiki/Development].
+
+Credits
+
+	This plugin owes its existence to Henrik Nyh, for writing the original that inspired it, and Dustin Brewer, for his preference and menu item code.
+	The current incarnation of CSP was re-written from scratch by me, since I wanted to clean up the code. The algorithm itself still borrows heavily from Henrik's File Transfer Sender Subdirectories Plugin, though.
+
