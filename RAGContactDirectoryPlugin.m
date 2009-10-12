@@ -58,7 +58,7 @@
 	useDisplayName = [[[adium preferenceController] preferenceForKey:@"RAGCDUseDisplayName"
 															   group:@"RAGContactDirectory"] boolValue];
 	// Set up menu item
-	toggleDisplayNameMenuItem = [[NSMenuItem allocWithZone:[NSMenu menuZone]] initWithTitle:@"Display Name in Download Subfolder"
+	toggleDisplayNameMenuItem = [[NSMenuItem allocWithZone:[NSMenu menuZone]] initWithTitle:NSLocalizedString(@"Display Name in Download Subfolder", @"Edit menu item to toggle display names in per-contact subfolders")
 																					 target:self
 																					 action:@selector(toggleDisplayNameInFolder:)
 																			  keyEquivalent:@""];

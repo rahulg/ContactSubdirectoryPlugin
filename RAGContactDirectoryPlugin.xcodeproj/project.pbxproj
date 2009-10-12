@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B715048B1081DDB600149602 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B71502921081DC9500149602 /* Adium.framework */; };
 		B715048C1081DDB600149602 /* AIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B71502941081DC9500149602 /* AIUtilities.framework */; };
+		B7BFF0F4108349F500AB3B1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7BFF0F2108349F500AB3B1A /* Localizable.strings */; };
 		B7F4BDF91081B43A0091A911 /* RAGContactDirectoryPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F4BDF81081B43A0091A911 /* RAGContactDirectoryPlugin.m */; };
 /* End PBXBuildFile section */
 
@@ -18,6 +19,7 @@
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B71502921081DC9500149602 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adium.framework; path = "/Users/Rahul/Developer/adium-1.4/build/Release/Adium.framework"; sourceTree = "<absolute>"; };
 		B71502941081DC9500149602 /* AIUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AIUtilities.framework; path = "/Users/Rahul/Developer/adium-1.4/build/Release/AIUtilities.framework"; sourceTree = "<absolute>"; };
+		B7BFF0F3108349F500AB3B1A /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B7F4BDF71081B43A0091A911 /* RAGContactDirectoryPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAGContactDirectoryPlugin.h; sourceTree = "<group>"; };
 		B7F4BDF81081B43A0091A911 /* RAGContactDirectoryPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAGContactDirectoryPlugin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +61,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B7BFF0F2108349F500AB3B1A /* Localizable.strings */,
 				8D5B49B7048680CD000E48DA /* Info.plist */,
 			);
 			name = Resources;
@@ -148,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7BFF0F4108349F500AB3B1A /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +167,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B7BFF0F2108349F500AB3B1A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7BFF0F3108349F500AB3B1A /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB913B08733D840010E9CD /* Debug */ = {

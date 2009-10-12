@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AIMinimumAdiumVersionRequirement</key>
-	<string>1.4</string>
+	<string>1.3</string>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
+	<string>en_GB</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>

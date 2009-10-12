@@ -1,0 +1,9 @@
+/* 
+   Localizable.strings
+   RAGContactDirectoryPlugin
+
+   Created by Rahul AG on 12/10/09.
+ */
+
+/* Edit menu item to toggle display names in per-contact subfolders */
+"Display Name in Download Subfolder" = "Display Name in Download Subfolder";
