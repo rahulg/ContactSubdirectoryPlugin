@@ -46,7 +46,7 @@
 
 - (void)installPlugin {
 	
-	AILog(@"(RAGCttDir): Plugin Loaded");
+	// AILog(@"(RAGCttDir): Plugin Loaded");
 	
 	// Register plugin
 	[[adium notificationCenter] addObserver:self
@@ -71,7 +71,7 @@
 	
 	[toggleDisplayNameMenuItem release];
 	[[adium notificationCenter] removeObserver:self];
-	AILog(@"(RAGCttDir): Plugin Unloaded");
+	// AILog(@"(RAGCttDir): Plugin Unloaded");
 	
 }
 
@@ -131,7 +131,7 @@
 	NSString *targetPath = [fileManager uniquePathForPath:[targetSubdirectory stringByAppendingPathComponent:destinationFile]];
 	[currentFileTransfer setLocalFilename:targetPath];
 	
-	AILog(@"(RAGCttDir): FILE[%@] FROM[%@] REDIR.TO[%@]", destinationFile, (useDisplayName ? displayName : userID), targetPath);
+	// AILog(@"(RAGCttDir): FILE[%@] FROM[%@] REDIR.TO[%@]", destinationFile, (useDisplayName ? displayName : userID), targetPath);
 	
 }
 
